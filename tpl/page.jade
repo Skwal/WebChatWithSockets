@@ -1,0 +1,30 @@
+doctype html
+html
+    head
+        title= "Node.js chat"
+        link(href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css', rel='stylesheet')
+        link(href='/chat.css', rel='stylesheet')
+        script(src='http://code.jquery.com/jquery-1.11.0.min.js')
+        script(src='/chat.js')
+        script(src='/socket.io/socket.io.js')
+    body
+      .row
+        .col-md-4
+          #content
+        .col-md-2
+          #usercount
+            | 0 users online
+          #usernames
+      .row
+        .controls.col-md-4
+          #error.alert.alert-danger.hidden
+          form#username
+            .input-group.col-sm-3
+              input#name.form-control(placeholder='Username', type='text')
+              span.input-group-btn
+                input.btn.btn-primary(type='submit', value='Save')
+          form#form
+            .input-group
+              input#field.form-control(placeholder='Message...', type='text')
+              span.input-group-btn
+                input.btn.btn-primary(type='submit', value='Send')

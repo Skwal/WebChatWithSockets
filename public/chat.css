@@ -1,0 +1,36 @@
+body {
+    padding: 30px;
+}
+#content {
+    height: 300px;
+    margin: 0 0 20px 0;
+    padding: 10px;
+    border: solid 1px #999;
+    overflow-y: scroll;
+}
+#content > span {
+    font-weight: bold;
+}
+#name {
+    width: 150px;
+}
+.btn {
+    font-size: 16px;
+}
+.input-group {
+    padding-bottom: 5px;
+}
+
+.server {
+    color: blue;
+}
+.user {
+    color: green;
+}
+.me {
+    color: red;
+}
+
+#usercount {
+    font-weight: bold;
+}

@@ -1,0 +1,11 @@
+{
+    "name": "WebChatWithSockets",
+    "version": "0.1.0",
+    "description": "chat application using socket.io",
+    "dependencies": {
+        "socket.io": "0.9.16",
+        "express": "3.4.8",
+        "jade": "1.1.5"
+    },
+    "author": "Pascal Peuckert"
+}
