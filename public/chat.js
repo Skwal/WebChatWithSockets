@@ -12,7 +12,11 @@ window.onload = function() {
 
     var user = '';
 
-    name.value = '';
+    var lsName = localStorage.getItem('chatName') || 'Guest';
+
+    socket.emit('changename', { name: lsName });
+
+    name.value = lsName;
 
     socket.on('message', function (data) {
         if(data.message) {
@@ -64,6 +68,7 @@ window.onload = function() {
                     socket.emit('send', { message: user + " is now known as " + newname + "!" });
                 }
                 socket.emit('changename', { name: newname });
+                localStorage.setItem('chatName', newname) ;
                 user = newname;
             }
             field.focus();

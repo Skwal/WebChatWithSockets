@@ -13,6 +13,8 @@ app.use(express.static(__dirname + '/public'));
 
 var io = require('socket.io').listen(app.listen(port));
 
+var ent = require('ent');
+
 var count = 0,
     users = {};
 
@@ -22,10 +24,14 @@ io.sockets.on('connection', function (socket) {
     socket.set('nickname', 'Guest');
     users[socket.id] = 'Guest';
 
-    io.sockets.emit('count', {
-        num: count,
-        users: users
-    });
+    var updateList = function() {
+        io.sockets.emit('count', {
+            num: count,
+            users: users
+        });
+    }
+
+    updateList();
 
     socket.on('disconnect', function () {
         count--;
@@ -33,26 +39,24 @@ io.sockets.on('connection', function (socket) {
             message: users[socket.id] + " is now offline!"
         });
         delete users[socket.id];
-        io.sockets.emit('count', {
-            num: count,
-            users: users
-        });
+        updateList();
     });
 
     socket.on('changename', function (data) {
-        users[socket.id] = data.name;
-        socket.set('nickname', data.name);
-        // console.log(users);
-        io.sockets.emit('count', {
-            num: count,
-            users: users
-        });
+        users[socket.id] = ent.encode(data.name);
+        socket.set('nickname', ent.encode(data.name));
+        updateList();
+    });
+
+    socket.on('send', function (data) {
+        if (data.username && data.username !== users[socket.id]) {
+            users[socket.id] = ent.encode(data.username);
+            updateList();
+        }
+        data.message = ent.encode(data.message);
+        io.sockets.emit('message', data);
     });
 
     // Welcome message
     socket.emit('message', { message: 'Welcome to the chat - Please choose a username' });
-
-    socket.on('send', function (data) {
-        io.sockets.emit('message', data);
-    });
 });
