@@ -1,7 +1,7 @@
 window.onload = function() {
 
     var messages = [];
-    var socket = io.connect('http://127.0.0.1:3700');
+    var socket = io.connect();
 
     var field   = document.getElementById('field'),
         form    = document.getElementById('form'),

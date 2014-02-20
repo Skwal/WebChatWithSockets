@@ -29,6 +29,9 @@ io.sockets.on('connection', function (socket) {
 
     socket.on('disconnect', function () {
         count--;
+        io.sockets.emit('message', {
+            message: users[socket.id] + " is now offline!"
+        });
         delete users[socket.id];
         io.sockets.emit('count', {
             num: count,
@@ -39,7 +42,7 @@ io.sockets.on('connection', function (socket) {
     socket.on('changename', function (data) {
         users[socket.id] = data.name;
         socket.set('nickname', data.name);
-        console.log(users);
+        // console.log(users);
         io.sockets.emit('count', {
             num: count,
             users: users
