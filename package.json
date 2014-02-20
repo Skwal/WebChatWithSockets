@@ -6,7 +6,7 @@
         "socket.io": "0.9.16",
         "express": "3.4.8",
         "jade": "1.1.5",
-        "ent": "latest"
+        "ent": "0.1.0"
     },
-    "author": "Pascal Peuckert"
+    "author": "Pascal Peuckert <skwaloo@gmail.com>"
 }
