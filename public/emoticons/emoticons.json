@@ -1,0 +1,110 @@
+{
+    "smile": {
+        "title": "Smile",
+        "codes": ["&colon;&rpar;", "&colon;&equals;&rpar;", "&colon;-&rpar;"]
+    },
+    "sad-smile": {
+        "title": "Sad Smile",
+        "codes": ["&colon;&lpar;", "&colon;&equals;&lpar;", "&colon;-&lpar;"]
+    },
+    "big-smile": {
+        "title": "Big Smile",
+        "codes": ["&colon;D", "&colon;&equals;D", "&colon;-D", "&colon;d", "&colon;&equals;d", "&colon;-d"]
+    },
+    "cool": {
+        "title": "Cool",
+        "codes": ["8&rpar;", "8&equals;&rpar;", "8-&rpar;", "B&rpar;", "B&equals;&rpar;", "B-&rpar;", "&lpar;cool&rpar;"]
+    },
+    "wink": {
+        "title": "Wink",
+        "codes": ["&colon;o", "&colon;&equals;o", "&colon;-o", "&colon;O", "&colon;&equals;O", "&colon;-O"]
+    },
+    "crying": {
+        "title": "Crying",
+        "codes": ["&semi;&lpar;", "&semi;-&lpar;", "&semi;&equals;&lpar;"]
+    },
+    "sweating": {
+        "title": "Sweating",
+        "codes": ["&lpar;sweat&rpar;", "&lpar;:&VerticalLine;"]
+    },
+    "speechless": {
+        "title": "Speechless",
+        "codes": ["&colon;&VerticalLine;", "&colon;&equals;&VerticalLine;", "&colon;-&VerticalLine;"]
+    },
+    "kiss": {
+        "title": "Kiss",
+        "codes": ["&colon;&midast;", "&colon;&equals;&midast;", "&colon;-&midast;"]
+    },
+    "tongue-out": {
+        "title": "Tongue Out",
+        "codes": ["&colon;P", "&colon;&equals;P", "&colon;-P", "&colon;p", "&colon;&equals;p", "&colon;-p"]
+    },
+    "blush": {
+        "title": "Blush",
+        "codes": ["&lpar;blush&rpar;", "&colon;&dollar;", "&colon;-&dollar;", "&colon;&equals;&dollar;", "&colon;&bsol;&gt;"]
+    },
+    "wondering": {
+        "title": "Wondering",
+        "codes": ["&colon;^&rpar;"]
+    },
+    "sleepy": {
+        "title": "Sleepy",
+        "codes": ["&VerticalLine;-&rpar;", "I-&rpar;", "I&equals;&rpar;", "&lpar;snooze&rpar;"]
+    },
+    "dull": {
+        "title": "Dull",
+        "codes": ["&VerticalLine;&lpar;", "&VerticalLine;-&lpar;", "&VerticalLine;&equals;&lpar;"]
+    },
+    "in-love": {
+        "title": "In love",
+        "codes": ["&lpar;inlove&rpar;"]
+    },
+    "evil-grin": {
+        "title": "Evil grin",
+        "codes": ["]&colon;&rpar;", ">&colon;&rpar;", "&lpar;grin&rpar;"]
+    },
+    "talking": {
+        "title": "Talking",
+        "codes": ["&lpar;talk&rpar;"]
+    },
+    "yawn": {
+        "title": "Yawn",
+        "codes": ["&lpar;yawn&rpar;", "&VerticalLine;-&lpar;&rpar;"]
+    },
+    "puke": {
+        "title": "Puke",
+        "codes": ["&lpar;puke&rpar;", "&colon;&", "&colon;-&", "&colon;&equals;&"]
+    },
+    "doh!": {
+        "title": "Doh!",
+        "codes": ["&lpar;doh&rpar;"]
+    },
+    "angry": {
+        "title": "Angry",
+        "codes": ["&colon;@", "&colon;-@", "&colon;&equals;@", "x&lpar;", "x-&lpar;", "x&equals;&lpar;", "X&lpar;", "X-&lpar;", "X&equals;&lpar;"]
+    },
+    "it-wasnt-me": {
+        "title": "It wasn't me",
+        "codes": ["&lpar;wasntme&rpar;"]
+    },
+    "party": {
+        "title": "Party!!!",
+        "codes": ["&lpar;party&rpar;"]
+    },
+    "worried": {
+        "title": "Worried",
+        "codes": ["&colon;S", "&colon;-S", "&colon;&equals;S", "&colon;s", "&colon;-s", "&colon;&equals;s"]
+    },
+    "mmm": {
+        "title": "Mmm...",
+        "codes": ["&lpar;mm&rpar;"]
+    },
+    "nerd": {
+        "title": "Nerd",
+        "codes": ["8-&VerticalLine;", "B-&VerticalLine;", "8&VerticalLine;", "B&VerticalLine;", "8&equals;&VerticalLine;", "B&equals;&VerticalLine;", "&lpar;nerd&rpar;"]
+    },
+    "lips-sealed": {
+        "title": "Lips Sealed",
+        "codes": ["&colon;x", "&colon;-x", "&colon;X", "&colon;-X", "&colon;#", "&colon;-#", "&colon;&equals;x", "&colon;&equals;X", "&colon;&equals;#"]
+    }
+}
