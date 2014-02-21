@@ -1,6 +1,6 @@
 {
     "name": "WebChatWithSockets",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "chat application using socket.io",
     "dependencies": {
         "socket.io": "0.9.16",

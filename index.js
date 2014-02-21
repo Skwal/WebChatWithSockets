@@ -24,6 +24,8 @@ io.sockets.on('connection', function (socket) {
     socket.set('nickname', 'Guest');
     users[socket.id] = 'Guest';
 
+    socket.set('lastmsg', 0);
+
     var updateList = function() {
         io.sockets.emit('count', {
             num: count,
@@ -49,12 +51,18 @@ io.sockets.on('connection', function (socket) {
     });
 
     socket.on('send', function (data) {
-        if (data.username && data.username !== users[socket.id]) {
-            users[socket.id] = ent.encode(data.username);
-            updateList();
-        }
-        data.message = ent.encode(data.message);
-        io.sockets.emit('message', data);
+        var now = Date.now();
+        socket.get('lastmsg', function(err, value) {
+            if (now - value > 2000) {
+                socket.set('lastmsg', now);
+                if (data.username && data.username !== users[socket.id]) {
+                    users[socket.id] = ent.encode(data.username);
+                    updateList();
+                }
+                data.message = ent.encode(data.message);
+                io.sockets.emit('message', data);
+            }
+        });
     });
 
     // Welcome message

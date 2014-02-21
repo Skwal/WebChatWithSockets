@@ -18,6 +18,7 @@ window.onload = function() {
 
 
     var user = '';
+    var lastmsg = 0;
 
     var lsName = localStorage.getItem('chatName') || 'Guest';
 
@@ -85,22 +86,27 @@ window.onload = function() {
 
     // send message
     form.onsubmit = function(e) {
+        var now = Date.now();
         e.preventDefault();
         if(name.value == '') {
             err.innerHTML = "Please type your name!";
             err.classList.remove('hidden');
             name.focus();
-        } else {
+        }  else {
             if (field.value == '') {
                 err.innerHTML = "Please type a message!";
                 err.classList.remove('hidden');
+            } else if(now - lastmsg <= 2000) {
+                err.innerHTML = "Please wait at least 2 seconds before sending a new message!";
+                err.classList.remove('hidden');
             } else {
+                lastmsg = now;
                 err.classList.add('hidden');
                 var text = field.value;
                 socket.emit('send', { message: text, username: name.value });
                 field.value = "";
-                field.focus();
             }
+            field.focus();
         }
     };
 
